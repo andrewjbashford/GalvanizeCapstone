@@ -53,7 +53,7 @@ Analyze relationships of artists within reviews
     
     - What is the relationship between album scores for an artist and the album scores of artists that reviewers associate with an artist within a review
 
-## Anticipate Hurdles and Scope of Project
+## Anticipated Hurdles and Scope of Project
 
 How to handle reissues? Pitchfork often reviews reissues of notable albums as a chance to update album scores while incorporating the artists’ longevity. These reviews should be removed from the corpus when evaluating Pitchfork’s treatments of new music.
 
