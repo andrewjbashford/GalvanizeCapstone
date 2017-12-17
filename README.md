@@ -75,6 +75,8 @@ Will scrape 2017 data
 May need supplementary initial album release date data to deal with reissues
 Can get through Music Brainz
 
+ ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline.png "Logo Title Text 1")
+
 
 ## Additional Thoughts
 Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
