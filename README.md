@@ -33,7 +33,7 @@ Important Inflection Points:
     2. 2011 major website redesign, 
     3. Launch of Pitchfork Music Festival in 2006. Each of these events could be motives for the editorial staff to change the criterion for reviewing records
     
-   ![All.png](attachment:images/All.png)
+   ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/All.png "Logo Title Text 1")
 
 ### Determine if reviewers successfully defend the scores given to albums
 
