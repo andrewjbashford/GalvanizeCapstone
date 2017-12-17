@@ -75,7 +75,7 @@ Will scrape 2017 data
 May need supplementary initial album release date data to deal with reissues
 Can get through Music Brainz
 
- ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline.png "Logo Title Text 1")
+ ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline1.png "Logo Title Text 1")
 
 
 ## Additional Thoughts
