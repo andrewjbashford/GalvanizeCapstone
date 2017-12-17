@@ -43,9 +43,13 @@ Analyze sentiment of reviews
     
     - Are the reviews of late less biting? More ‘mainstream’? Less pretentious?
     - Do some reviewers tend to write with anger? joy? Different writing styles for different genres or artist types?
-    - Sometimes the score an album receives doesn’t match up with the sentiment of the reviewer. I’d like to investigate if certain albums receive a “team score” that doesn’t necessarily represent the opinion of the review author. Also, I’d like to evaluate the change in language used over time. I assert that the style of writing used now is more neutral than the style of writing used in years past.
-    - Do reviewers change their language when writing about less established artists? Does the level of persuasiveness change based on album score?
-    - Build and evaluate models that predicts album scores / predict Best New Music based on NLP of review content. Can this be done with a relatively high level of accuracy?
+      Has this changed over time?
+    - Scores are often determined at the time of assignment by the editorial staff. 
+      Does the sentiment of the reviewer always line up with the score given to the album?
+    - Do reviewers change their language when writing about less established artists? 
+      Does the level of persuasiveness change based on album score?
+    - Build and evaluate models that predicts album scores / predict Best New Music based on NLP of review content. 
+      Can this be done with a relatively high level of accuracy?
 
 ### Develop a recommendation system to recommend albums to readers
 
