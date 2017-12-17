@@ -1,4 +1,4 @@
-## Is Pitchfork, the biggest independent music review website, losing its edge?
+## Is Pitchfork losing its edge?
 
 Pitchfork.com gained a reputation in the past 18 years for its ability to pick artists out of obscurity and put them in the mainstream, and for its ability to destroy the rise of an artist with one scathing review, and generally for its pretentiousness. As it has gained popularity, and especially after it was acquired by Condé Nast in 2015, I’ve observed that the reviews have gotten ‘softer’, perhaps in an attempt to appeal to a broader base of readers, and gain traffic through keyword search by doing reviews for more established artists.
 
@@ -9,31 +9,31 @@ Pitchfork.com gained a reputation in the past 18 years for its ability to pick a
     3. Develop a recommendation system to recommend albums to readers
     
 I’m not the first person to analyze data from Pitchfork:
-    1. https://opendatascience.com/blog/processing-the-language-of-pitchfork-part-1/ This article analyzes the reading level of Pitchfork’s reviews -- they are using similar methodology to what I anticipate doing, but solving a different problem
-    2. https://nlp.stanford.edu/courses/cs224n/2011/reports/cadander-esegel-jepense.pdf
-This study extracts the important phrases and words from music reviews across the web to create a shorter descriptive snippet
-    3. https://rstudio-pubs-static.s3.amazonaws.com/286186_b58494562ee64d0bb7da79dcfa7e5186.html
-This study does meandering EDA on the same dataset I will be using.
-https://github.com/nolanbconaway/pitchfork-data/tree/master/notebooks
 
-Investigates distribution of Best New Music assignments and evaluates independence / autocorrelation between reviewers / albums from same artists
+    1. https://opendatascience.com/blog/processing-the-language-of-pitchfork-part-1/ 
+    - This article analyzes the reading level of Pitchfork’s reviews -- they are using similar methodology to what I anticipate doing, but solving a different problem
+    2. https://nlp.stanford.edu/courses/cs224n/2011/reports/cadander-esegel-jepense.pd 
+    - This study extracts the important phrases and words from music reviews across the web to create a shorter descriptive snippet
+    3. https://rstudio-pubs-static.s3.amazonaws.com/286186_b58494562ee64d0bb7da79dcfa7e5186.html
+    - This study does meandering EDA on the same dataset I will be using.
+    4.https://github.com/nolanbconaway/pitchfork-data/tree/master/notebooks
+    - This investigates distribution of Best New Music assignments and evaluates independence / autocorrelation between reviewers / albums from same artists
 
 ## Why does this matter?
-Conde Nast / Pitchfork editorial staff have a vested interest 
-Could help lead to improvements for readers
-
-
-
-
+Pitchfork's reputation for discovering artists and being the leading opinion on music is important. Conde Nast / Pitchfork editorial staff have a vested interest, and a better understanding of the review critera could help lead to improvements for readers. Clustering artists and reviews into different genre-bending groups would help readers discover new music based on the reviews they are choosing to read.
 
 ## Next Steps
 ### Determine if Pitchfork has made an objective change to their review criteria since being acquired by Conde Nast
 
 We can gain some information about ‘if Pitchfork is losing its edge’ by doing some descriptive statistical analysis of reviews over the past 20 years. 
+
 Important Inflection Points: 
-Before/after acquisition by Conde Nast in 2015
-2011 major website redesign, 
-Launch of Pitchfork Music Festival in 2006. Each of these events could be motives for the editorial staff to change the criterion for reviewing records
+
+    1. Before/after acquisition by Conde Nast in 2015
+    2. 2011 major website redesign, 
+    3. Launch of Pitchfork Music Festival in 2006. Each of these events could be motives for the editorial staff to change the criterion for reviewing records
+    
+   ![All.png](attachment:images/All.png)
 
 ### Determine if reviewers successfully defend the scores given to albums
 
