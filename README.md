@@ -53,9 +53,7 @@ Analyze sentiment of reviews
 
 ### Develop a recommendation system to recommend albums to readers
 
-Analyze relationships of artists within reviews
-    
- What is the relationship between album scores for an artist and the album scores of artists that reviewers associate with an artist within a review
+Use mentions of other artists, similar types of describer words, and similar scores to recommended further reading.
 
 ## Anticipated Hurdles and Scope of Project
 
@@ -68,10 +66,6 @@ Since Pitchfork reviews are written and scored subjectively, I anticipate measur
 MOE may be tricky as we are dealing with subjective / opinion-based material
 MOP -- there are ~20,000 reviews in the database. Shouldn’t be issues with production
 
-
-
-
-
 ## Data
 Review Data through Jan 2017
 https://www.kaggle.com/nolanbconaway/pitchfork-data/data
@@ -80,16 +74,13 @@ Will scrape 2017 data
 
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/data_sample.png "Logo Title Text 1")
 
-
 May need supplementary initial album release date data to deal with reissues
 Can get through Music Brainz
 
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline1.png "Logo Title Text 1")
-
 
 ## Additional Thoughts
 
 Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
 
 Ex. Taylor Swift’s music was previously ignored, but now Pitchfork will review artists like her even if the album being reviewed generates an average / unremarkable rating
-
