@@ -40,15 +40,17 @@ Important Inflection Points:
 How has the range of album scores changed over time? By staff reviewers?
 
 Analyze sentiment of reviews
+    
     - Are the reviews of late less biting? More ‘mainstream’? Less pretentious?
     - Do some reviewers tend to write with anger? joy? Different writing styles for different genres or artist types?
     - Sometimes the score an album receives doesn’t match up with the sentiment of the reviewer. I’d like to investigate if certain albums receive a “team score” that doesn’t necessarily represent the opinion of the review author. Also, I’d like to evaluate the change in language used over time. I assert that the style of writing used now is more neutral than the style of writing used in years past.
     - Do reviewers change their language when writing about less established artists? Does the level of persuasiveness change based on album score?
-    - Build and evaluate models that predicts album scores based on NLP of review content. Can this be done with a relatively high level of accuracy?
+    - Build and evaluate models that predicts album scores / predict Best New Music based on NLP of review content. Can this be done with a relatively high level of accuracy?
 
 ### Develop a recommendation system to recommend albums to readers
 
 Analyze relationships of artists within reviews
+    
     - What is the relationship between album scores for an artist and the album scores of artists that reviewers associate with an artist within a review
 
 ## Anticipate Hurdles and Scope of Project
@@ -79,8 +81,7 @@ Can get through Music Brainz
 
 
 ## Additional Thoughts
-Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
-Ex. Taylor Swift’s music was previously ignored, but now Pitchfork will review artists like her even if the album being reviewed generates an average / unremarkable rating
-Create graph of related artists based on who is mentioned in reviews, check for patterns of scores by community
-Can we predict Best New Music based on text of review?
-Describe your techniques: break the data pipeline into portions and describe each one.
+
+    - Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
+    - Ex. Taylor Swift’s music was previously ignored, but now Pitchfork will review artists like her even if the album being reviewed generates an average / unremarkable rating
+
