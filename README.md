@@ -82,6 +82,7 @@ Can get through Music Brainz
 
 ## Additional Thoughts
 
-    - Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
-    - Ex. Taylor Swift’s music was previously ignored, but now Pitchfork will review artists like her even if the album being reviewed generates an average / unremarkable rating
+Pitchfork was previously known for launching the careers of unknown artists (Arcade Fire, Bon Iver, Clap Your Hands Say Yeah all attribute Pitchfork’s favorable reviews to the rise of their careers). In years past, they would often forgo writing reviews for popular artists that they didn’t deem as essential -- whether or not an album got a review was itself an editorial statement on its OWN for the album’s quality.
+
+Ex. Taylor Swift’s music was previously ignored, but now Pitchfork will review artists like her even if the album being reviewed generates an average / unremarkable rating
 
