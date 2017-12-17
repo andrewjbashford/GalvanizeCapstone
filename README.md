@@ -51,7 +51,7 @@ Analyze sentiment of reviews
 
 Analyze relationships of artists within reviews
     
-    - What is the relationship between album scores for an artist and the album scores of artists that reviewers associate with an artist within a review
+ What is the relationship between album scores for an artist and the album scores of artists that reviewers associate with an artist within a review
 
 ## Anticipated Hurdles and Scope of Project
 
@@ -73,6 +73,9 @@ Review Data through Jan 2017
 https://www.kaggle.com/nolanbconaway/pitchfork-data/data
 
 Will scrape 2017 data
+
+ ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/data_sample.png "Logo Title Text 1")
+
 
 May need supplementary initial album release date data to deal with reissues
 Can get through Music Brainz
