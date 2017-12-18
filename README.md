@@ -63,9 +63,6 @@ I anticipate that I will be able to find conclusive evidence to evaluate if / ho
 
 Since Pitchfork reviews are written and scored subjectively, I anticipate measuring the effectiveness of any models, recommenders and analysis I do will be difficult.
 
-MOE may be tricky as we are dealing with subjective / opinion-based material
-MOP -- there are ~20,000 reviews in the database. Shouldn’t be issues with production
-
 ## Data
 Review Data through Jan 2017
 https://www.kaggle.com/nolanbconaway/pitchfork-data/data
@@ -74,8 +71,7 @@ Will scrape 2017 data
 
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/data_sample.png "Logo Title Text 1")
 
-May need supplementary initial album release date data to deal with reissues
-Can get through Music Brainz
+Will get data about initial album release from Music Brainz to deal with reissues.
 
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline1.png "Logo Title Text 1")
 
