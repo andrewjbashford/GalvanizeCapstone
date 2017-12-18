@@ -67,11 +67,9 @@ Since Pitchfork reviews are written and scored subjectively, I anticipate measur
 Review Data through Jan 2017
 https://www.kaggle.com/nolanbconaway/pitchfork-data/data
 
-Will scrape 2017 data
-
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/data_sample.png "Logo Title Text 1")
 
-Will get data about initial album release from Music Brainz to deal with reissues.
+Over the holidays, I'll scrape 2017 reviews myself, and I'll get data about initial album release from Music Brainz to deal with reissues.
 
  ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/pipeline1.png "Logo Title Text 1")
 
