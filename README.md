@@ -64,6 +64,9 @@ Have Pitchfork writers become more objective or subjective in their tone? A more
 
 Using Google Trends, we can get a broad sense of how many people were searching for an artist before or after Pitchfork published a review of their new album. Using Arcade Fire and Clap Your Hands Say Yeah! as a baseline, have there been other very obscure artists that had their first spike in Google searches after Pitchfork posted a review?
 
+ ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/arcade_fire_searches.png "Logo Title Text 1")
+
+
 ### Develop a recommendation system to recommend albums to readers
 
 Use mentions of other artists, similar types of describer words, and similar scores to recommended further reading.
