@@ -22,6 +22,9 @@ I’m not the first person to analyze data from Pitchfork:
 ## Why does this matter?
 Pitchfork's reputation for discovering artists and being the leading opinion on music is important. Conde Nast / Pitchfork editorial staff have a vested interest, and a better understanding of the review critera could help lead to improvements for readers. Clustering artists and reviews into different genre-bending groups would help readers discover new music based on the reviews they are choosing to read.
 
+Pitchfork markets itself as the most trusted voice in music. To preserve that reputation, they need to be on the cutting edge of discovering new, relevant artists, and take a firm stance on what its readers should be listening to.
+
+
 ## Next Steps
 ### Determine if Pitchfork has made an objective change to their review criteria since being acquired by Conde Nast
 
@@ -50,6 +53,19 @@ Analyze sentiment of reviews
       Does the level of persuasiveness change based on album score?
     - Build and evaluate models that predicts album scores / predict Best New Music based on NLP of review content. 
       Can this be done with a relatively high level of accuracy?
+      
+### Has sentiment of reviews changed over time?
+
+Have Pitchfork writers changed the severity of their tone since the Conde Nast acquisition? Do positive reviews have a more/less positive sentiment? Do negative reviews have a more/less negative sentiment?
+
+Have Pitchfork writers become more objective or subjective in their tone? A more objective stance suggests that writers are less willing to take risks in the reviews they are writing.
+
+### Has Pitchfork launched the careers of any artists since the Conde Nast acquisition?
+
+Using Google Trends, we can get a broad sense of how many people were searching for an artist before or after Pitchfork published a review of their new album. Using Arcade Fire and Clap Your Hands Say Yeah! as a baseline, have there been other very obscure artists that had their first spike in Google searches after Pitchfork posted a review?
+
+ ![alt text](https://github.com/andrewjbashford/GalvanizeCapstone/blob/master/images/arcade_fire_searches.png "Logo Title Text 1")
+
 
 ### Develop a recommendation system to recommend albums to readers
 
