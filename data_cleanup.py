@@ -57,7 +57,7 @@ def add_sentiment(df, column, new_col_pol, new_col_subj):
     #                           TextBlob(df_mid['content'][each], analyzer=NaiveBayesAnalyzer()).sentiment))
 
     df_cont_sent = pd.DataFrame(sentiments, columns=['reviewid', new_col_pol, new_col_subj])
-    return df.merge(df_abs_sent)
+    return df.merge(df_cont_sent)
 
 
 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
     df = df.merge(df_years)
     df = df.merge(df_genres)
     df = df.merge(df_reviews).reset_index()
-
+    print 'data merged'
     #Fill NA Values for Year, Drop any duplicates, drop any unimportant columns
     df.year.fillna(value=df.pub_year, inplace=True)
     df.drop_duplicates('reviewid',inplace=True)
@@ -100,10 +100,15 @@ if __name__ == "__main__":
     df.reset_index(inplace=True)
     df['content'] = df['content'].map(remove_weird_char)
     df['abstract'] = df['abstract'].map(remove_weird_char)
+    print 'beginning NLP parsing'
     df = parse_for_adj(df, 'abstract', 'abstract_adj')
+    print 'abs adj done'
     df = parse_for_adj(df, 'content', 'content_adj')
+    print 'content adj done'
     df = add_sentiment(df, 'content_adj', 'cont_polarity', 'cont_subjectivity')
+    print 'sentiment content done'
     df = add_sentiment(df, 'abstract_adj', 'abs_polarity', 'abs_subjectivity')
+    print 'sentiment abs done'
     df = add_columns(df)
 
     # save CSV one level up so that it doesn't go to github
