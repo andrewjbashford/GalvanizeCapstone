@@ -53,7 +53,7 @@ def parse_for_adj(df, column, new_column_name):
 def add_sentiment(df, column, new_col_pol, new_col_subj):
     sentiments = []
     for each in range(len(df['reviewid'])):
-        sentiments.append((df['reviewid'].iloc[each], TextBlob(df['content_adj'][each]).sentiment[0], TextBlob(df['content_adj'][each]).sentiment[1]))
+        sentiments.append((df['reviewid'].iloc[each], TextBlob(df[column][each]).sentiment[0], TextBlob(df[column][each]).sentiment[1]))
     #                           TextBlob(df_mid['content'][each], analyzer=NaiveBayesAnalyzer()).sentiment))
 
     df_cont_sent = pd.DataFrame(sentiments, columns=['reviewid', new_col_pol, new_col_subj])
