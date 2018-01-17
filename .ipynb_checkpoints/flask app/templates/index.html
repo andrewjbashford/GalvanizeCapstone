@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main_style.css')}}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <div class="dtable">
+        <div style="display: table-row;">
+            <div class="d_cell">
+                <h2>Displaying NLP Techniques</h2>
+                <p>
+                    The purpose of this app is to display a few NLP techniques
+                    performed by the spaCy.io package.  Put a block of text in the
+                    field below, and have it run whichever task you want.
+                </p>
+                <form action="{{ url_for('analyze_text') }}" method="post">
+                    <textarea name="text1" cols="30" rows="5"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div class="d_cell">
+                <h2>Results</h2>
+                <div id="results">
+                    {% if data is not none %}
+                    <table>
+                        <tbody>
+                            <thead>
+                                <th>Entity</th>
+                                <th>Start Token</th>
+                                <th>Stop Token</th>
+                            </thead>
+                            {% data %}
+                            <tr>
+                                <td>{{ent}}</td>
+                                <td>{{start}}</td>
+                                <td>{{stop}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

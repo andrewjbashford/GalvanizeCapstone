@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main_style.css')}}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+            <div>
+                <h2>Submit Pitchfork Album URL</h2>
+                <form action="{{ url_for('make_recommendation') }}" method="post">
+                    <textarea name="text1" cols="30" rows="1"></textarea>
+                    <input type="submit">
+                </form>
+            </div>
+
+            <div>
+                <h2>Results for {{requested_artist}}:</h2>
+                <div id="results">
+                    {% if all_info is not none %}
+                    <table>
+                        <tbody>
+                            <thead>
+                                <th>Artist</th>
+                                <th>Album</th>
+                                <th>Spotify</th>
+                                <th>Review</th>
+                                <th>Score</th>
+                                <th>Description</th>
+                            </thead>
+                            {% for each in all_info %}
+                            <tr>
+                                <td style="font-weight:bold">{{each[0]}}</td>
+                                <td style="font-weight:bold">{{each[1]}}</td>
+                                {% if each[7] == 1 %}
+                                <td><iframe src="https://open.spotify.com/embed?uri=spotify:album:{{each[6]}}&view=coverart" width="300" height="330" frameborder="0" allowtransparency="true"></iframe></td>
+                                {% else %}
+                                <td><a href={{each[2]}} target="_blank">Search On Spotify</td>
+                                {% endif %}
+                                <td><a href={{each[3]}} target="_blank">Pitchfork Link</a></td>
+                                <td style="font-weight:bold">{{each[4]}}</td>
+                                <td>{{each[5]}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    {% endif %}
+                </div>
+            </div>
+</body>
+</html>
