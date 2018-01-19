@@ -33,12 +33,16 @@ def get_links(df_similar):
     df_copy = df_similar.reset_index()
     all_info = []
     for i in range(len(df_similar['url'])):
+        try:
+            abstract = df_copy['abstract'][i].decode('utf-8')
+        except:
+            abstract = " "
         all_info.append((df_copy['artist'][i].title(),
                         df_copy['title'][i].title(),
                         "https://open.spotify.com/search/results/{}".format(df_copy['artist'][i].replace(" ", "%20")),
                         df_copy['url'][i],
                         df_copy['score'][i],
-                        df_copy['abstract'][i].decode('utf-8'),
+                        abstract,
                         df_copy['album_uri'][i],
                         df_copy['spotify_match'][i]))
     return all_info
@@ -51,7 +55,7 @@ def get_similar(df, url, recommender, recommender_tfidf):
     return df[(df['score'] > 7) &
                (df['url'].isin(top_5_similar))][['artist','title', 'score', 'url', 'danceability rounded',
                                                 'valence rounded', 'energy rounded', 'acousticness rounded',
-                                               'pub_year', 'spotify_match', 'album_uri', 'abstract']].sample(5)
+                                               'pub_year', 'spotify_match', 'album_uri', 'abstract']]
 
 
 @app.route('/')
