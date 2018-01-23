@@ -1,5 +1,5 @@
-# GalvanizeCapstone
-This is a repository to use for my Galvanize Capstone Project
+# Is Pitchfork Losing Its Edge?
+An Analysis of Pitchfork Reviews Since Its 2015 Acquisition by Condé Nast & Pitchfork Review Recommendation System
 
 # Project Overview
 
