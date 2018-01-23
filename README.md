@@ -8,13 +8,15 @@ Pitchfork is an online music publication with a reputation for being opinionated
 <img src="powerpoint%20images/onion%20article.png" height=40%  width=40%  alt="Onion Article">
 
 
-In 2015, they were acquired by the large media company Conde Nast, leaving fans skeptical of the future of Pitchfork’s reputation.
+In 2015, they were acquired by the large media company Conde Nast, leaving fans skeptical of the future of Pitchfork’s reputation. Here's an excerpt from a recent AMA that Pitchfork conducted on Reddit:
 
-<img src="powerpoint%20images/reddit%20example.png" height=90%  width=90%  alt="Reddit AMA">
+
+<img src="powerpoint%20images/reddit_logo.png" height=15%  width=15%  alt="Reddit AMA">
+<img src="powerpoint%20images/reddit%20example.png" height=100%  width=100%  alt="Reddit AMA">
 
 Do Pitchfork's more critical fans have any basis to claim that Pitchfork has become more 'vanilla' over time? 
 
-I conducted statistical analysis on their scoring methodology and used natural language processing techniques on the content of reviews in search of evidence that Pitchfork has measurably changed since they were acquired.
+I conducted statistical analysis on their **scoring methodology** and used natural language processing techniques on the **content of reviews** in search of evidence that **Pitchfork has measurably changed since they were acquired.**
 
 # Data Collection
 
