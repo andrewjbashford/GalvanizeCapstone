@@ -88,7 +88,9 @@ First, I needed to get more data. I used a wrapper from GitHub to access Spotify
 
 <img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
 
-In building the content-content recommender in GraphLab, I used all of the features from Spotify, combined with TF-IDF vectors of each album review with Pitchfork's tagged genre as the basis for recommendations in GraphLab.
+In building the content-content recommender in GraphLab, I used all of the features from Spotify, combined with TF-IDF vectors of each album review and Pitchfork's tagged genre as the basis for recommendations in GraphLab.
+
+Since my recommender only need content data, I evaluated it using domain knowledge and just by listening to the recommendations it made for a few hours over the weekend. 
 
 System Requirements:
 - GraphLab
@@ -100,13 +102,6 @@ System Requirements:
 I'd like to dive deeper into using Sentiment Analysis to model the relationship between the written text and the score given a review over time. I have anecdotally noticed that more frequently a review will read as a complete pan when it received a score of 6.0+. The challenge I encountered during the scope of this project was that sentiment polarity is much more difficult when the writing is at a high reading level, as Pitchfork uses more nuanced and literary writing styles than what TextBlob's models were trained on.
 
 Currently, the recommender system only runs on my local machine (the GraphLab recommender objects are too large to push to GitHub). The Flask app is Heroku-ready except that Heroku is unable to install GraphLab upon launch.
-
-# Data Cleanup
-
-I have included a CSV of the Pitchfork data that does not include any of the columns created doing NLP analysis.
-
-Running data_cleanup.py will create a CSV with all data in the directory above wherever you clone this repo. You will need to install TextBlob and spaCy for that to run. Note that it takes ~30 minutes to run.
-
 
 # Technology Stack
 
@@ -135,3 +130,5 @@ https://github.com/nolanbconaway/pitchfork-data
 
 Github repo used to get Spotify data into R:
 https://github.com/charlie86/spotifyr
+
+
