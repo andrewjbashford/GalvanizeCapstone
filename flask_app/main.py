@@ -8,8 +8,8 @@ pd.options.display.max_colwidth = 100
 
 recommender = gl.load_model('../recommender')
 recommender_tfidf = gl.load_model('../recommender_tfidf')
-df = pd.read_csv('../pitchfork_no_nlp.csv')
-df_spotify = pd.read_csv('spotify_with_rank.csv')
+df = pd.read_csv('data/pitchfork_no_nlp.csv')
+df_spotify = pd.read_csv('data/spotify_with_rank.csv')
 df_spotify = df_spotify.groupby(['title', 'artist', 'album_uri']).mean().reset_index()
 
 df_merged = df.merge(df_spotify, how='left', on=['artist', 'title'])
