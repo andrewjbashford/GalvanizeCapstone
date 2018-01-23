@@ -124,6 +124,7 @@ Spotify Data:
 
 Pitchfork Review Recommender:
 - GraphLab
+- Flask
 
 
 # Acknowledgments
