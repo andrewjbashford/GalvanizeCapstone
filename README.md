@@ -52,8 +52,6 @@ Next, I evaluated if Pitchfork is still willing to gamble on new artists. In 200
 But, since then, they have only given an album a 9.0 or above 8 times when the artist is being reviewed for the first time… and zero times since 2010.
 
 <img src="powerpoint%20images/count_new_artists.png" alt="New Artist Results">
-*\*Artists with  0 previous reviews on Pitchfork at time of publication*
-
 
 # Natural Language Processing
 
