@@ -22,6 +22,9 @@ I conducted statistical analysis on their **scoring methodology** and used natur
 
 First, I scraped Pitchfork’s archives to gather over 19,000 reviews since 1999. I started with code from Nolan Conaway's GitHub, but had to make several adjustments to accomodate changes to Pitchfork's HTML and adding important features.
 
+<img src="images/data_sample.png" alt="pandas">
+
+
 Reissues and older album reviews are not clearly marked on Pitchfork. I used RegEx to categorize any albums containing 'reissue', 'collector', 'box set' etc. as reviews that are not for the first release. Pitchfork tends to score these albums higher, so they were removed from my dataset for the analysis of scores.
 
 
@@ -35,9 +38,22 @@ I broke down Pitchfork reviews into five major buckets:
 4. Before the Conde Nast acquisition in 2015
 5. After the acquisition
 
+<img src="powerpoint%20images/scoring_distro.png" alt="Score Distribution">
+
+
 The spread of scores given to albums has tightened with each major event.
 
-Next, I evaluated if Pitchfork is still willing to gamble on new artists. In 2004, they gave Arcade Fire a 9.7 for their first release, putting them on the map. But, since then, they have only given an album a 9.0 or above 8 times when the artist is being reviewed for the first time… and zero times since 2010.
+Next, I evaluated if Pitchfork is still willing to gamble on new artists. In 2004, they gave Arcade Fire a 9.7 for their first release, putting them on the map:
+
+<img src="powerpoint%20images/arcade%20fire%20screen%20grab.png" height=85%  width=85% alt="Arcade Fire Review">
+<img src="powerpoint%20images/arcade%20fire%20searches.png" alt="Arcade Fire Google Trends">
+
+
+But, since then, they have only given an album a 9.0 or above 8 times when the artist is being reviewed for the first time… and zero times since 2010.
+
+<img src="powerpoint%20images/count_new_artists.png" alt="New Artist Results">
+*\*Artists with  0 previous reviews on Pitchfork at time of publication*
+
 
 # Natural Language Processing
 
