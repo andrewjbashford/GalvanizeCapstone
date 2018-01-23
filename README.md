@@ -92,6 +92,9 @@ In building the content-content recommender in GraphLab, I used all of the featu
 
 Since my recommender only need content data, I evaluated it using domain knowledge and just by listening to the recommendations it made for a few hours over the weekend. 
 
+<img src="images/rec_demo.gif" alt="Recommendation Demo">
+
+
 System Requirements:
 - GraphLab
 - Python
