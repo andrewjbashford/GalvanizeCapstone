@@ -14,7 +14,7 @@ In 2015, they were acquired by the large media company Conde Nast, leaving fans 
 <img src="powerpoint%20images/reddit_logo.png" height=15%  width=15%  alt="Reddit AMA">
 <img src="powerpoint%20images/reddit%20example.png" height=100%  width=100%  alt="Reddit AMA">
 
-Do Pitchfork's more critical fans have any basis to claim that Pitchfork has become more 'vanilla' over time? 
+Do Pitchfork's more critical readers have any basis to claim that Pitchfork has become more 'vanilla' over time? 
 
 I conducted statistical analysis on their **scoring methodology** and used natural language processing techniques on the **content of reviews** in search of evidence that **Pitchfork has measurably changed since they were acquired.**
 
@@ -84,15 +84,22 @@ First, I needed to get more data. I used a wrapper from GitHub to access Spotify
 2. Energy - a 0.0 to 1.0 score measuring intensity and activity. Energetic tracks feel fast, loud and noisy
 3. Valence - a 0.0 to 1.0 score measuring how positive a track sounds
 4. Acousticness - a confidence measure from 0.0 to 1.0 of whether the track is acoustic.
-5. Release Year - included since Pitchford data only includes the year the review was published.
+5. Release Year - included since Pitchfork data only includes the year the review was published.
 
 <img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
 
+In building the content-content recommender in GraphLab, I used all of the features from Spotify, combined with TF-IDF vectors of each album review with Pitchfork's tagged genre as the basis for recommendations in GraphLab.
 
 System Requirements:
 - GraphLab
 - Python
 - Flask
+
+# Future Work
+
+I'd like to dive deeper into using Sentiment Analysis to model the relationship between the written text and the score given a review over time. I have anecdotally noticed that more frequently a review will read as a complete pan when it received a score of 6.0+. The challenge I encountered during the scope of this project was that sentiment polarity is much more difficult when the writing is at a high reading level, as Pitchfork uses more nuanced and literary writing styles than what TextBlob's models were trained on.
+
+Currently, the recommender system only runs on my local machine (the GraphLab recommender objects are too large to push to GitHub). The Flask app is Heroku-ready except that Heroku is unable to install GraphLab upon launch.
 
 # Data Cleanup
 
