@@ -16,7 +16,7 @@ In 2015, they were acquired by the large media company Conde Nast, leaving fans 
 
 Do Pitchfork's more critical fans have any basis to claim that Pitchfork has become more 'vanilla' over time? 
 
-I conducted statistical analysis on their scoring methodology and used natural language processing techniques on the content of reviews in search of evidence that Pitchfork has measurably changed since they were acquired.
+I conducted statistical analysis on their **scoring methodology** and used natural language processing techniques on the **content of reviews** in search of evidence that **Pitchfork has measurably changed since they were acquired.**
 
 # Data Collection
 
