@@ -1,7 +1,6 @@
 from flask import render_template, request
 from flask_app import app
 import numpy as np
-from textblob import TextBlob
 import graphlab as gl
 import pandas as pd
 pd.options.display.max_colwidth = 100
