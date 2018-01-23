@@ -2,6 +2,8 @@
 An Analysis of Pitchfork Reviews Since Its 2015 Acquisition by Condé Nast & Pitchfork Review Recommendation System
 
 # Background & Motivation
+<img src="powerpoint%20images/onion%20article.png" height=50%  width=50%  alt="Onion Article" ALIGN="right">
+<br><br>
 Pitchfork is an online music publication with a reputation for being opinionated, snobby, but usually right.
 
 In 2015, they were acquired by the large media company Conde Nast, leaving fans skeptical of the future of Pitchfork’s reputation.
