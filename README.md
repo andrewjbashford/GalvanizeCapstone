@@ -32,6 +32,9 @@ Natural Language Processing:
 - TextBlob
 - scikit-learn
 
+Spotify Data:
+- R
+
 Pitchfork Review Recommender:
 - GraphLab
 
