@@ -78,7 +78,13 @@ Has Pitchfork changed its scoring methodology and review content since its acqui
 
 Since my initial question had a pretty straightforward answer, I wanted to take things a step further to leverage Pitchfork's writing to make Pitchfork an even better tool for discovering music. So, I built a Pitchfork Review Recommendation System.
 
-First, I needed to get more data. I used 
+First, I needed to get more data. I used a wrapper from GitHub to access Spotify's API to get audio analysis for all tracks from the artists that Pitchfork has covered and took the mean for each album, ultimately matching with 11,600 albums on Pitchfork. The Spotify features I used were:
+
+1. Danceability - a 0.0 to 1.0 score indicating how danceable a track is based on tempo, rhymthm stability, beat strength and overal regularity.
+2. Energy - a 0.0 to 1.0 score measuring intensity and activity. Energetic tracks feel fast, loud and noisy
+3. Valence - a 0.0 to 1.0 score measuring how positive a track sounds
+4. Acousticness - a confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+5. Release Year - included since Pitchford data only includes the year the review was published.
 
 <img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
 
