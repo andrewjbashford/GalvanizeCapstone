@@ -57,7 +57,13 @@ But, since then, they have only given an album a 9.0 or above 8 times when the a
 
 I used SpaCy to tag all 14 million words from reviews with their part of speech, counting up the words that are most likely to be descriptive (adjectives, adverbs and certain tenses of verbs). I then used TextBlob to get a subjectivity score for each review, measuring how opinionated or objective the author was. 
 
+<img src="powerpoint%20images/nlp.png" alt="NLP Process">
+
+
 I found that since 2003, Pitchfork reviews are getting less descriptive. The boxplots have notches indicating a 95% confidence interval of the median, showing that these changes are statistically significant. I also found that, while the content of the reviews has become more objective, the one-to-two sentence abstract at the top of the review has become more subjective. The subjectivity of the content and the abstract are converging together, giving the reader a more consistent account of Pitchfork’s opinion.
+
+<img src="powerpoint%20images/nlp_results.png" alt="NLP Results">
+
 
 # Summary
 
@@ -69,6 +75,9 @@ Has Pitchfork changed its scoring methodology and review content since its acqui
 - Pitchfork has become more consistent in the Abstract 
 
 # Pitchfork Review Recommendation System:
+
+<img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
+
 
 System Requirements:
 - GraphLab
