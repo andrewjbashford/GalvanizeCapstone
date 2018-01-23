@@ -14,7 +14,7 @@ In 2015, they were acquired by the large media company Conde Nast, leaving fans 
 <img src="powerpoint%20images/reddit_logo.png" height=15%  width=15%  alt="Reddit AMA">
 <img src="powerpoint%20images/reddit%20example.png" height=100%  width=100%  alt="Reddit AMA">
 
-Do Pitchfork's more critical fans have any basis to claim that Pitchfork has become more 'vanilla' over time? 
+Do Pitchfork's more critical readers have any basis to claim that Pitchfork has become more 'vanilla' over time? 
 
 I conducted statistical analysis on their **scoring methodology** and used natural language processing techniques on the **content of reviews** in search of evidence that **Pitchfork has measurably changed since they were acquired.**
 
@@ -57,11 +57,17 @@ But, since then, they have only given an album a 9.0 or above 8 times when the a
 
 I used SpaCy to tag all 14 million words from reviews with their part of speech, counting up the words that are most likely to be descriptive (adjectives, adverbs and certain tenses of verbs). I then used TextBlob to get a subjectivity score for each review, measuring how opinionated or objective the author was. 
 
+<img src="powerpoint%20images/nlp.png" alt="NLP Process">
+
+
 I found that since 2003, Pitchfork reviews are getting less descriptive. The boxplots have notches indicating a 95% confidence interval of the median, showing that these changes are statistically significant. I also found that, while the content of the reviews has become more objective, the one-to-two sentence abstract at the top of the review has become more subjective. The subjectivity of the content and the abstract are converging together, giving the reader a more consistent account of Pitchfork’s opinion.
+
+<img src="powerpoint%20images/nlp_results.png" alt="NLP Results">
+
 
 # Summary
 
-Has Pitchfork changed its scoring methodology and review content since its acquisition?
+Has Pitchfork changed its scoring methodology and review content since its acquisition? Yes:
 
 - The spread of the score distribution has tightened
 - Pitchfork doesn’t gamble big on new artists
@@ -70,17 +76,32 @@ Has Pitchfork changed its scoring methodology and review content since its acqui
 
 # Pitchfork Review Recommendation System:
 
+Since my initial question had a pretty straightforward answer, I wanted to take things a step further to leverage Pitchfork's writing to make Pitchfork an even better tool for discovering music. So, I built a Pitchfork Review Recommendation System.
+
+First, I needed to get more data. I used a wrapper from GitHub to access Spotify's API to get audio analysis for all tracks from the artists that Pitchfork has covered and took the mean for each album, ultimately matching with 11,600 albums on Pitchfork. The Spotify features I used were:
+
+1. Danceability - a 0.0 to 1.0 score indicating how danceable a track is based on tempo, rhymthm stability, beat strength and overal regularity.
+2. Energy - a 0.0 to 1.0 score measuring intensity and activity. Energetic tracks feel fast, loud and noisy
+3. Valence - a 0.0 to 1.0 score measuring how positive a track sounds
+4. Acousticness - a confidence measure from 0.0 to 1.0 of whether the track is acoustic.
+5. Release Year - included since Pitchfork data only includes the year the review was published.
+
+<img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
+
+In building the content-content recommender in GraphLab, I used all of the features from Spotify, combined with TF-IDF vectors of each album review and Pitchfork's tagged genre as the basis for recommendations in GraphLab.
+
+Since my recommender only need content data, I evaluated it using domain knowledge and just by listening to the recommendations it made for a few hours over the weekend. 
+
 System Requirements:
 - GraphLab
 - Python
 - Flask
 
-# Data Cleanup
+# Future Work
 
-I have included a CSV of the Pitchfork data that does not include any of the columns created doing NLP analysis.
+I'd like to dive deeper into using Sentiment Analysis to model the relationship between the written text and the score given a review over time. I have anecdotally noticed that more frequently a review will read as a complete pan when it received a score of 6.0+. The challenge I encountered during the scope of this project was that sentiment polarity is much more difficult when the writing is at a high reading level, as Pitchfork uses more nuanced and literary writing styles than what TextBlob's models were trained on.
 
-Running data_cleanup.py will create a CSV with all data in the directory above wherever you clone this repo. You will need to install TextBlob and spaCy for that to run. Note that it takes ~30 minutes to run.
-
+Currently, the recommender system only runs on my local machine (the GraphLab recommender objects are too large to push to GitHub). The Flask app is Heroku-ready except that Heroku is unable to install GraphLab upon launch.
 
 # Technology Stack
 
@@ -109,3 +130,5 @@ https://github.com/nolanbconaway/pitchfork-data
 
 Github repo used to get Spotify data into R:
 https://github.com/charlie86/spotifyr
+
+
