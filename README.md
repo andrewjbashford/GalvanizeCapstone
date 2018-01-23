@@ -5,11 +5,36 @@ This is a repository to use for my Galvanize Capstone Project
 
 # Key Findings
 
-# Launch the Recommender
+# Launching the Recommender:
+
+System Requirements:
+- GraphLab
+- Python
+- Flask
 
 # Data Cleanup
 
+I have included a CSV of the Pitchfork data that does not include any of the columns created doing NLP analysis.
+
+Running data_cleanup.py will create a CSV with all data in the directory above wherever you clone this repo. You will need to install TextBlob and spaCy for that to run. Note that it takes ~30 minutes to run.
+
+
 # Technology Stack
+
+Data Collection / Visualization:
+- Python
+- BeautifulSoup
+- pandas/numpy
+- matplotlib/seaborn
+
+Natural Language Processing:
+- spaCy
+- TextBlob
+- scikit-learn
+
+Pitchfork Review Recommender:
+- GraphLab
+
 
 # Acknowledgments
 
