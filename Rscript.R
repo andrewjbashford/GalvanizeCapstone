@@ -68,11 +68,32 @@ get_artist_audio_features <- function(artist_name, access_token = get_spotify_ac
   
   return(tots)
 }
-radiohead_features <- get_artist_audio_features('radiohead')
+radiohead_features <- get_artist_audio_features('Weird Al Yankovic')
 
-radiohead_features %>% 
-  group_by(album_name) %>% 
-  summarize(avg_valance = mean(valence))
 
-read_csv()
-getwd()
+
+df <- read_csv('artists.csv') %>% select(artist = `0`)
+start_features <- get_artist_audio_features('radiohead') %>% mutate(artist = 'radiohead')
+
+for (val in df$artist) {
+  try({features <- get_artist_audio_features(val) %>% mutate(artist = val)
+       start_features <- bind_rows(start_features, features)
+       print(val)})
+}
+
+start_features %>% write_csv('spotifydata.csv')
+
+
+
+
+
+df <- read_csv('title_artists.csv') %>% select(artist = `0`)
+start_features <- get_artist_audio_features('radiohead') %>% mutate(artist = 'radiohead')
+
+for (val in df$artist) {
+  try({features <- get_artist_audio_features(val) %>% mutate(artist = val)
+  start_features <- bind_rows(start_features, features)
+  print(val)})
+}
+
+start_features %>% write_csv('spotifydata2.csv')

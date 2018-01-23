@@ -41,7 +41,7 @@ def parse_for_adj(df, column, new_column_name):
         non_PN = []
         blob = nlp(unicode(df[column][i]))
         for each in blob:
-            if each.tag_ == u'ADJ' or each.tag_ == u'JJ':
+            if each.tag_ in [u'JJ', u'JJR', u'JJS', u'VBZ', u'VBG', u'RB', u'RBR', u'RBS']:
                 non_PN.append(str(each))
         prop_noun_parse.append((df['reviewid'][i], " ".join(non_PN)))
 
@@ -64,8 +64,8 @@ def add_sentiment(df, column, new_col_pol, new_col_subj):
 #Add a few additional columns for more NLP and bins for scores
 def add_columns(df):
     df['word_count'] = df['content'].str.count('\w+')
-    df['adj_count'] = df['content_adj'].str.count('\w+')
-    df['adj_freq'] = df['adj_count'] / df['word_count']
+    df['desc_count'] = df['content_desc'].str.count('\w+')
+    df['desc_freq'] = df['desc_count'] / df['word_count']
     df['score_bin'] = (df['score'] // 1).astype(int)
     return df
 
@@ -101,15 +101,15 @@ if __name__ == "__main__":
     df['content'] = df['content'].map(remove_weird_char)
     df['abstract'] = df['abstract'].map(remove_weird_char)
     print 'beginning NLP parsing'
-    df = parse_for_adj(df, 'abstract', 'abstract_adj')
+    df = parse_for_adj(df, 'abstract', 'abstract_desc')
     print 'abs adj done'
-    df = parse_for_adj(df, 'content', 'content_adj')
+    df = parse_for_adj(df, 'content', 'content_desc')
     print 'content adj done'
-    df = add_sentiment(df, 'content_adj', 'cont_polarity', 'cont_subjectivity')
+    df = add_sentiment(df, 'content_desc', 'cont_polarity', 'cont_subjectivity')
     print 'sentiment content done'
-    df = add_sentiment(df, 'abstract_adj', 'abs_polarity', 'abs_subjectivity')
+    df = add_sentiment(df, 'abstract_desc', 'abs_polarity', 'abs_subjectivity')
     print 'sentiment abs done'
     df = add_columns(df)
 
     # save CSV one level up so that it doesn't go to github
-    df.to_csv('../pitchfork2.csv')
+    df.to_csv('../pitchfork4.csv')
