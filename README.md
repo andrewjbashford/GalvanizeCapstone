@@ -3,7 +3,7 @@ An Analysis of Pitchfork Reviews Since Its 2015 Acquisition by Condé Nast & Pit
 
 # Background & Motivation
 
-Pitchfork is an online music publication with a reputation for being opinionated, snobby, but usually right.
+Pitchfork is an online music publication with a reputation for being opinionated, a little snobby, but usually right. Below is a satiric article published by the Onion that says it all:
 
 <img src="powerpoint%20images/onion%20article.png" height=40%  width=40%  alt="Onion Article">
 
@@ -12,7 +12,9 @@ In 2015, they were acquired by the large media company Conde Nast, leaving fans 
 
 <img src="powerpoint%20images/reddit%20example.png" height=90%  width=90%  alt="Reddit AMA">
 
-Has Pitchfork changed its scoring methodology and review content since its acquisition?
+Do Pitchfork's more critical fans have any basis to claim that Pitchfork has become more 'vanilla' over time? 
+
+I conducted statistical analysis on their scoring methodology and used natural language processing techniques on the content of reviews in search of evidence that Pitchfork has measurably changed since they were acquired.
 
 # Data Collection
 
@@ -24,6 +26,7 @@ Reissues and older album reviews are not clearly marked on Pitchfork. I used Reg
 # Scoring Distribution
 
 I broke down Pitchfork reviews into five major buckets:
+
 1. Before the launch of Best New Music in 2003 
 2. Before the launch of Pitchfork Music Festival in 2006 (the first time Pitchfork had an incentive to promote specific artists)
 3. Before the major website redesign in 2011
