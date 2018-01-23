@@ -2,11 +2,15 @@
 An Analysis of Pitchfork Reviews Since Its 2015 Acquisition by Condé Nast & Pitchfork Review Recommendation System
 
 # Background & Motivation
-<img src="powerpoint%20images/onion%20article.png" height=50%  width=50%  alt="Onion Article" ALIGN="right">
-<br><br>
+
 Pitchfork is an online music publication with a reputation for being opinionated, snobby, but usually right.
 
+<img src="powerpoint%20images/onion%20article.png" height=40%  width=40%  alt="Onion Article">
+
+
 In 2015, they were acquired by the large media company Conde Nast, leaving fans skeptical of the future of Pitchfork’s reputation.
+
+<img src="powerpoint%20images/reddit%20example.png" height=90%  width=90%  alt="Reddit AMA">
 
 Has Pitchfork changed its scoring methodology and review content since its acquisition?
 
