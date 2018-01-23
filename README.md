@@ -67,7 +67,7 @@ I found that since 2003, Pitchfork reviews are getting less descriptive. The box
 
 # Summary
 
-Has Pitchfork changed its scoring methodology and review content since its acquisition?
+Has Pitchfork changed its scoring methodology and review content since its acquisition? Yes:
 
 - The spread of the score distribution has tightened
 - Pitchfork doesn’t gamble big on new artists
@@ -75,6 +75,10 @@ Has Pitchfork changed its scoring methodology and review content since its acqui
 - Pitchfork has become more consistent in the Abstract 
 
 # Pitchfork Review Recommendation System:
+
+Since my initial question had a pretty straightforward answer, I wanted to take things a step further to leverage Pitchfork's writing to make Pitchfork an even better tool for discovering music. So, I built a Pitchfork Review Recommendation System.
+
+First, I needed to get more data. I used 
 
 <img src="powerpoint%20images/data_overview.png" alt="Pitchfork and Spotify Data">
 
