@@ -97,11 +97,16 @@ Since my recommender only need content data, I evaluated it using domain knowled
 
 <img src="images/rec_demo.gif" alt="Recommendation Demo">
 
+# Running the Recommender on Your Own Machine
+
+Until I'm able to host the recommender, you can perform the following steps to use the recommender on your own.
 
 System Requirements:
 - GraphLab
 - Python
 - Flask
+
+Run create_recommender.py. It'll take 10-15 minutes and ~200MB of disk space for GraphLab to train the recommenders. After tht is completed, run the .sh file in this repo using bash: ```bash run.sh```. You should be able to launch Flask in a browser.
 
 # Future Work
 
