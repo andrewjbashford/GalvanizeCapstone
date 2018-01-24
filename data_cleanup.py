@@ -11,9 +11,13 @@ sys.setdefaultencoding('utf8')
 
 import spacy
 nlp = spacy.load('en')
-#Reviews containing the following words are reissued albums
+
 
 def parse_content_for_reissue(df, list_of_words):
+    """
+    Takes in a DataFrame and a list of words that indicate if the albums
+    to be reviewed is a reissue, box set, or any other release other than new
+    """
     df['reissue'] = 0
     for each in list_of_words:
         df['reissue'] = df['reissue'] + df['abstract'].str.contains(each).astype('int')
@@ -22,20 +26,28 @@ def parse_content_for_reissue(df, list_of_words):
 
 #Reviews that were reviewed years after their release are classic albums
 def reissue_columns(df):
+    """
+    Albums that were reviewed years after their release are classic albums
+    """
     df['num_years_since_release'] = df.pub_year - df.year
     df['new_album'] = ((df['reissue'] == 0) & (df['num_years_since_release'] <= 1)).astype(int)
     return df
 
 
-#Remove unusual characters from content and abstract
 
 def remove_weird_char(string):
+    """
+    Remove unusual characters from content and abstract
+    """
     return re.sub('[^A-Za-z0-9]+', ' ', string)
 
 
-#Add columns of adjectives and adverbs used in review content and abstract
 
 def parse_for_adj(df, column, new_column_name):
+    """
+    Add columns of adjectives and adverbs used in review content and abstract.
+    Must pass through the new column name, as well as the column to be parsed.
+    """
     prop_noun_parse = []
     for i in range(len(df[column])):
         non_PN = []
@@ -49,8 +61,12 @@ def parse_for_adj(df, column, new_column_name):
     return df.merge(df_new)
 
 
-#Adding Sentiment Scores with TextBlob of content and abstract adjectives/adverbs. This will come in handy later.
 def add_sentiment(df, column, new_col_pol, new_col_subj):
+    """
+    Adding Sentiment Scores with TextBlob of content and abstract adjectives/adverbs.
+    Must pass through the new column names for polarity and subjectivity, as well
+    as the column to be parsed.
+    """
     sentiments = []
     for each in range(len(df['reviewid'])):
         sentiments.append((df['reviewid'].iloc[each], TextBlob(df[column][each]).sentiment[0], TextBlob(df[column][each]).sentiment[1]))
@@ -63,6 +79,10 @@ def add_sentiment(df, column, new_col_pol, new_col_subj):
 
 #Add a few additional columns for more NLP and bins for scores
 def add_columns(df):
+    """
+    This function uses regex to add word counts for previously created columns,
+    as well as a score_bin
+    """
     df['word_count'] = df['content'].str.count('\w+')
     df['desc_count'] = df['content_desc'].str.count('\w+')
     df['desc_freq'] = df['desc_count'] / df['word_count']
