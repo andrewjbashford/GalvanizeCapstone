@@ -1,3 +1,6 @@
+<img src="powerpoint%20images/p4k.png" height=10%  width=10%  alt="Logo" alight='right'>
+
+
 # Is Pitchfork Losing Its Edge?
 An Analysis of Pitchfork Reviews Since Its 2015 Acquisition by Condé Nast & Pitchfork Review Recommendation System
 
